@@ -14,7 +14,7 @@ const PlaylistPage = () => {
     const id = useParams();
     useEffect(() => {
         getPlaylists();
-
+        
     }, []);
     const pla = useContext(PlayerContext);
 
