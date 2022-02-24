@@ -8,6 +8,8 @@ const Profile = () => {
     return (
         <header>
             <h1>Profile</h1>
+            <h3>Welcome {user.nickname}</h3>
+            <img src={user.picture} alt="some dude" />
         </header>
     );
 };
