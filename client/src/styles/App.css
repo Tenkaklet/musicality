@@ -1,228 +1,236 @@
-@import url('https://fonts.googleapis.com/css2?family=Georama:wght@300&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Georama:wght@300&display=swap");
 
 /* Base Styles */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Georama', sans-serif;
+  font-family: "Georama", sans-serif;
 }
-
 
 .grid-layout {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
-    gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  gap: 10px;
 }
 
-
 .wrapper {
-    width: 100rem;
-    padding: 0 2rem;
-    margin: 0 auto 10% auto;
+  width: 100%;
+  padding: 0 2rem;
+  margin: 0 auto 10% auto;
 }
 
 .loading-spinner {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Navigation */
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.2rem;
 }
 
 nav .brand {
-    display: flex;
-    width: 20rem;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  width: 20rem;
+  justify-content: center;
+  align-items: center;
 }
 
 nav .brand a {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #000;
-    letter-spacing: .1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  letter-spacing: 0.1rem;
 }
-
 
 nav .search-form {
-    width: 13rem;
-    margin: auto;
+  width: 13rem;
+  margin: auto;
 }
 
-
 nav .search-form input {
-    outline: none;
-    width: 100%;
-    height: 1.5rem;
-    padding: .7rem .5rem;
-    transition: all 0.3s ease-in-out;
+  outline: none;
+  width: 100%;
+  height: 1.5rem;
+  padding: 0.7rem 0.5rem;
+  transition: all 0.3s ease-in-out;
 }
 
 nav .search-form input:hover {
-    width: 15rem;
+  width: 15rem;
 }
 
 nav .search-form input:focus {
-    width: 15rem;
+  width: 15rem;
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
+  list-style: none;
+  display: flex;
 }
 
 nav ul li {
-    margin-right: 2rem;
+  margin-right: 2rem;
 }
 
 nav ul li a {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #999;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #999;
 }
 
 nav ul li .auth-btn {
-    color: #999;
-    text-transform: uppercase;
-    background-color: transparent;
-    border-color: transparent;
-    font-size: 16px;
-    cursor: pointer;
+  color: #999;
+  text-transform: uppercase;
+  background-color: transparent;
+  border-color: transparent;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 nav ul li .auth-btn:hover {
-    color: #333;
+  color: #333;
 }
 
 nav ul li a:hover {
-    color: #333;
+  color: #333;
 }
-
 
 header h1 {
-    text-align: center;
+  text-align: center;
 }
 
-.featured  .featured-tracks {
-    display: flex;
-    flex-flow: wrap;
-    list-style: none;
-    margin: 3% 0;
-    padding: 3% 0;
+.featured .featured-tracks {
+  display: flex;
+  flex-flow: wrap;
+  list-style: none;
+  margin: 3% 0;
+  padding: 3% 0;
 }
+
+/* .tracks-playlists {
+    grid-area: featured-playlists;
+}
+
+.artists-albums {
+    grid-area: artists-albums;
+} */
 
 .featured .featured-tracks .featured-item {
-    width: 9rem;
-    margin: .5%;
-    position: relative;
+  width: 9rem;
+  margin: 0.5%;
+  position: relative;
 }
 
-
-
 .featured .featured-tracks .featured-item .featured-overlay {
-    background-color: rgba(24, 23, 23, 0.78);
-    color: #FFF;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 0;
-    transition: opacity 0.5s;
-    opacity: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: rgba(24, 23, 23, 0.78);
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  transition: opacity 0.5s;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .featured ul .featured-item .featured-overlay:hover {
-    opacity: 0.9;
-    cursor: pointer;
+  opacity: 0.9;
+  cursor: pointer;
 }
 
-
-
 .featured .featured-tracks .featured-item .featured-track-image {
-    width: 100%;
+  width: 100%;
 }
 
 .featured .featured-tracks .featured-item p {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .featured-playlists {
-    list-style: none;
+  list-style: none;
 }
 
 .featured.artists-albums .featured-item {
-    margin-bottom: 2.4rem;
-    text-align: center;
+  margin-bottom: 2.4rem;
+  text-align: center;
 }
 
 .featured.artists-albums .featured-item .featured-track-image {
-    height: 90%;
+  height: 90%;
 }
 
 .the-player {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 /* Playlist Page */
 
 .playlist-meta {
-    text-align: center;
+  text-align: center;
 }
 
 .playlist-meta img {
-    border-radius: 50%;
-    margin: 2%;
+  border-radius: 50%;
+  margin: 2%;
 }
 
 .track-list {
-    list-style: none;
+  list-style: none;
 }
 
 .playlist-wrapper {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .track-list li p {
-    display: flex;
-    margin: 1.2rem 0.5rem;
-    align-items: center;
+  display: flex;
+  margin: 1.2rem 0.5rem;
+  align-items: center;
 }
 
 .track-list img {
-    width: 30px;
-    margin: 0 2%;
+  width: 30px;
+  margin: 0 2%;
 }
 
 .track-list i {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .editorial-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (max-width: 375px) {
+    .grid-layout {
+        grid-template-columns: auto-fill;
+        
+    }
+    nav {
+        
+    }
 }
