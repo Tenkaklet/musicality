@@ -231,6 +231,12 @@ header h1 {
         
     }
     nav {
-        
+        background: #0e2838;
+        margin: 0;
+        padding: 5%;
+        width: 100%;
+    }
+    nav * {
+        color: #FFF !important;
     }
 }
