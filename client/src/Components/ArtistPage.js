@@ -6,7 +6,9 @@ const ArtistPage = () => {
     const id = useParams();
     console.log(id);
     return (
-        <div></div>
+        <div>
+            <h1>Artist Page #{id.artist}</h1>
+        </div>
     );
 };
 
