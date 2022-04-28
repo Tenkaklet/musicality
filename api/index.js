@@ -1,5 +1,6 @@
 const fetch = require('node-fetch');
 const apiUrl = 'https://api.jamendo.com/v3.0/';
+
 const api = (term) => {
     return new Promise((resolve, reject) => {
         if (term.meta === 'artist') {
