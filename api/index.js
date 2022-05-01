@@ -126,6 +126,16 @@ const api = (term) => {
                 }
             });
         }
+        if (term.artistInfo)  {
+            const res = fetch(`${apiUrl}/artists/musicinfo?client_id=42a786e1&format=jsonpretty&id=${+term.id}&limit=all`);
+            res.then(result => result.json()).then(json => {
+                if (json.headers.results_count > 0) {
+                    resolve(json.results);
+                } else {
+                    reject('No artist info found');
+                }
+            });
+        }
     });
 
 };

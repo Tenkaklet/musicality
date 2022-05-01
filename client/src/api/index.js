@@ -40,10 +40,15 @@ export const getFeed = async feedId => {
     });
 };
 
-export const getArtist = async artist => {
+export const getArtist = async artistId => {
     return await axios.post('/api/artist', {
-        artist
+        artistId
     });
 };
 
+export const getArtistInfo = async artistId => {
+    return await axios.post('/api/artistinfo', {
+        id: artistId
+    });
+};
 
