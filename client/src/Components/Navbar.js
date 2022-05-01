@@ -17,10 +17,10 @@ const Navbar = () => {
                 <li>
                     <Link to="/explore">Explore</Link>
                 </li>
-                { isAuthenticated ? 
-                <li>
-                    <Link to="/profile">Profile</Link>
-                </li> : ''}
+                {isAuthenticated ?
+                    <li>
+                        <Link to="/profile">Profile</Link>
+                    </li> : ''}
                 <li>
                     <AuthenticationButton />
                 </li>

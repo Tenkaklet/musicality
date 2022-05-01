@@ -1,13 +1,34 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
-import { getArtist } from '../api';
+import { getArtistInfo } from '../api';
+
 
 const ArtistPage = () => {
+
+    const [ artist, setArtist ] = useState({});
     const id = useParams();
-    console.log(id);
+    
+    useEffect(() => {
+        const artistInfo = async () => {
+            getArtistInfo(id.artist)
+            .then(res => {
+                setArtist(res.data[0]);
+            })
+            .catch(err => {
+                console.log(err);
+            });
+        };
+        artistInfo();
+    }, []);
+
+
     return (
-        <div>
-            <h1>Artist Page #{id.artist}</h1>
+        <div className="text-center">
+            <h2>{artist.name}</h2>
+            <img className="artist-image" src={artist.image} alt={artist.name} />
+            <div className="artist-meta">
+                <a href={artist.shareurl} target="_blank">Visit Artist</a>
+            </div>
         </div>
     );
 };

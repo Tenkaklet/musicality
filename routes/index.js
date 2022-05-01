@@ -69,6 +69,17 @@ router.post('/artist', (req, res) => {
     });
 });
 
+router.post('/artistinfo', (req, res) => {
+    api({
+        artistInfo: true,
+        id: req.body.id
+    }).then(response => {
+        res.send(response);
+    }).catch(err => {
+        res.send(err);
+    })
+});
+
 
 
 module.exports = router;
