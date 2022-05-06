@@ -29,6 +29,9 @@ function App() {
           <Route path={`/artist/:artist`}>
             <ArtistPage />
           </Route>
+          <Route path={`/explore/:genre`}>
+            {/* fix a specific genre component here */}
+          </Route>
         </Switch>
       </div>
       {pla.song === '' ? null: <Player url={pla.song} />}

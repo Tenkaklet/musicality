@@ -22,14 +22,14 @@ const Explore = () => {
     }, []);
     const listOfGenres = ['rock', 'reggae', 'pop', 'soul'];
     const listGenres = listOfGenres.map((genre, i) => {
-            return <li key={i}><p>{genre}</p></li>;
+            return <div className="specific-genre" key={i}><p>{genre}</p></div>;
         });
     return (
         <>
             <header>
                 <h1>Explore</h1>
             </header>
-            <div>
+            <div className="explore-container">
                 <ul className="genres-container">
                     {listGenres}
                 </ul>
