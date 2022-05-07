@@ -1,29 +1,20 @@
 import React, { useEffect, useState } from "react";
 import { getExplore } from "../api";
+import { useHistory } from "react-router-dom";
 
 
 const Explore = () => {
-    const [genre, setGenre] = useState([]);
-    const getTheGenre = async (g) => {
-        getExplore(g)
-            .then(res => {
-                console.log(g.toUpperCase());
-                console.log(res.data);
-            })
-            .catch(err => {
-                console.log(err);
-            })
-    };
-    useEffect(() => {
-        getTheGenre('rock');
-        getTheGenre('reggae');
-        getTheGenre('pop');
-        getTheGenre('soul');
-    }, []);
+    const history = useHistory();
     const listOfGenres = ['rock', 'reggae', 'pop', 'soul'];
+    
+    const onChangeGenre = (genre) => {
+        history.push('/specific/' + genre);
+    };
+
     const listGenres = listOfGenres.map((genre, i) => {
-            return <div className="specific-genre" key={i}><p>{genre}</p></div>;
+            return <div className="specific-genre" key={i} onClick={() => onChangeGenre(genre)}><p>{genre}</p></div>;
         });
+    
     return (
         <>
             <header>
