@@ -11,10 +11,11 @@ import React from "react";
 import Player from "./Player";
 import { PlayerContext } from "../contexts/PlayerContext";
 import ProtectedRoute from '../auth/protected-route';
+import ExporeSpecificGenre from './ExploreSpecificGenre';
 
 function App() {
   const pla = useContext(PlayerContext);
-  
+
   return (
     <>
       <Navbar />
@@ -29,9 +30,12 @@ function App() {
           <Route path={`/artist/:artist`}>
             <ArtistPage />
           </Route>
+          <Route path={`/specific/:genre`}>
+            <ExporeSpecificGenre />
+          </Route>
         </Switch>
       </div>
-      {pla.song === '' ? null: <Player url={pla.song} />}
+      {pla.song === '' ? null : <Player url={pla.song} />}
     </>
   );
 }

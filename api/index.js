@@ -136,6 +136,17 @@ const api = (term) => {
                 }
             });
         }
+
+        if (term.explore)  {
+            const res = fetch(`${apiUrl}/tracks/?client_id=42a786e1&format=jsonpretty&tags=${term.genre}&limit=45`);
+            res.then(result => result.json()).then(json => {
+                if (json.headers.results_count > 0) {
+                    resolve(json.results);
+                } else {
+                    reject('No tracks for that genre were found');
+                }
+            });
+        }
     });
 
 };

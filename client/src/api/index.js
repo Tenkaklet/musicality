@@ -52,3 +52,10 @@ export const getArtistInfo = async artistId => {
     });
 };
 
+
+export const getExplore = async genre => {
+    return await axios.post('/api/explore', {
+        genre
+    });
+};
+
