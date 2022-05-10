@@ -80,6 +80,17 @@ router.post('/artistinfo', (req, res) => {
     })
 });
 
+router.post('/explore', (req, res) => {
+    api({
+        explore: true,
+        genre: req.body.genre
+    }).then(response => {
+        res.send(response);
+    }).catch(err => {
+        res.send(err);
+    })
+});
+
 
 
 module.exports = router;

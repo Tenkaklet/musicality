@@ -248,6 +248,39 @@ header h1 {
   text-align: center;
 }
 
+/* Explore */
+
+.explore-container {
+  width: 50vw;
+  margin: 2% auto;
+}
+
+
+.genres-container {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.genres-container .specific-genre {
+  margin: 4%;
+  border: 1px dashed #000;
+  padding: 30px;
+  border-radius: 4px;
+  width: 15rem;
+  height: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.genres-container .specific-genre:hover {
+  cursor: pointer;
+}
+
 @media screen and (min-width: 375px) and (max-width: 768px)  {
     .grid-layout {
         grid-template-columns: auto-fill;
